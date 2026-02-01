@@ -1,0 +1,270 @@
+ body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.todo-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.card {
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+.card-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 15px 15px 0 0 !important;
+    padding: 20px;
+}
+
+.todo-item {
+    transition: all 0.3s ease;
+    border-left: 4px solid #667eea;
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+}
+
+.todo-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.todo-item.completed {
+    opacity: 0.6;
+    border-left-color: #28a745;
+}
+
+.todo-item.completed .todo-text {
+    text-decoration: line-through;
+    color: #6c757d;
+    width: 100%;
+}
+
+.btn-add {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    padding: 10px 25px;
+    transition: transform 0.2s;
+}
+
+.btn-add:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.btn-delete, .btn-edit {
+    transition: all 0.2s;
+}
+
+.btn-delete:hover, .btn-edit:hover {
+    transform: scale(1.1);
+}
+
+.edit-mode {
+    background-color: #fff3cd !important;
+    border-left-color: #ffc107 !important;
+}
+
+.edit-input {
+    border: 2px solid #667eea;
+    font-size: 1rem;
+}
+.btn-container {
+  display: flex;
+  margin: 0 0 0 14px;
+}
+
+/* Mobile CSS - Media Queries */
+@media (max-width: 768px) {
+    body {
+        padding: 10px 0;
+    }
+    
+    .todo-container {
+        padding: 0 10px;
+    }
+    
+    .card {
+        border-radius: 10px;
+        margin: 0;
+    }
+    
+    .card-header {
+        padding: 15px;
+        border-radius: 10px 10px 0 0 !important;
+    }
+    
+    .card-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .stats {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+    
+    .card-body {
+        padding: 15px;
+    }
+    
+    .input-group {
+        flex-direction: column;
+    }
+    
+    #todo-input {
+        border-radius: 8px !important;
+        margin-bottom: 10px;
+        font-size: 16px; 
+        width: 100%;
+    }
+    
+    .btn-add {
+        width: 100%;
+        border-radius: 8px !important;
+        padding: 12px;
+        font-size: 1rem;
+    }
+    
+    .btn-group {
+        flex-direction: row;
+    }
+    
+    .filter-btn {
+        font-size: 0.85rem;
+        padding: 8px 10px;
+    }
+    
+    /* Todo items mobile styles */
+    .todo-item {
+        padding: 12px !important;
+        margin-bottom: 8px;
+        border-left-width: 3px;
+    }
+    
+    .todo-item .d-flex {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .form-check-input {
+        width: 15px !important;
+        height: 15px !important;
+        margin-right: 10px !important;
+        /* flex-shrink: 0; */
+    }
+    
+    .todo-text {
+        font-size: 0.95rem;
+        word-break: break-word;
+        /* flex: 1; */
+        width: 100% !important;
+    }
+   
+    
+    /* Button container mobile styles */
+    .btn-container {
+        display: flex;
+        gap: 5px;
+        flex-shrink: 0;
+    }
+    
+    .btn-edit, .btn-delete {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+    
+    .btn-edit i, .btn-delete i {
+        font-size: 0.9rem;
+    }
+    
+    /* Edit mode mobile styles */
+    .edit-input {
+        font-size: 16px; 
+        padding: 8px;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    
+    .todo-item.edit-mode .d-flex {
+        flex-direction: column;
+        align-items: stretch !important;
+    }
+    
+    .todo-item.edit-mode .btn-container {
+        width: 100%;
+        justify-content: flex-end;
+    }
+    
+    .todo-item.edit-mode .btn-container button {
+        flex: 0 0 auto;
+    }
+    
+    /* Clear completed button mobile */
+    #clear-completed {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+    
+    /* Empty state mobile */
+    .text-center.text-muted i {
+        font-size: 2rem !important;
+    }
+    
+    .text-center.text-muted p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra small devices (phones in portrait mode) */
+@media (max-width: 480px) {
+    .card-header h2 {
+        font-size: 1.3rem;
+    }
+    
+    .stats {
+        font-size: 0.75rem;
+    }
+    
+    .filter-btn {
+        font-size: 0.75rem;
+        padding: 6px 8px;
+    }
+    
+    .todo-text {
+        font-size: 0.9rem;
+    }
+    
+    .btn-edit, .btn-delete {
+        padding: 5px 8px;
+    }
+}
+
+.form-control:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.stats {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    margin-top: 10px;
+}
+
+.filter-btn {
+    border: 1px solid #667eea;
+    color: #667eea;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: #667eea;
+    color: white;
+}
