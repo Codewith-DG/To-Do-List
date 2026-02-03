@@ -148,12 +148,11 @@
     }
     
     .todo-item .d-flex {
-        flex-wrap: wrap;
         gap: 8px;
     }
     
     .form-check-input {
-        width: 15px !important;
+        width: 20px !important;
         height: 15px !important;
         margin-right: 10px !important;
         /* flex-shrink: 0; */
@@ -170,8 +169,8 @@
     /* Button container mobile styles */
     .btn-container {
         display: flex;
-        gap: 5px;
         flex-shrink: 0;
+        margin: 0;
     }
     
     .btn-edit, .btn-delete {
@@ -237,7 +236,7 @@
     }
     
     .todo-text {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
     
     .btn-edit, .btn-delete {
